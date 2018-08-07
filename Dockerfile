@@ -20,12 +20,14 @@ RUN apt-get -y update && apt-get install -y \
 #RUN python3 get-pip.py
 RUN pip3 install ipython
 RUN pip3 install locuspocus
+WORKDIR /BuildNiceEquCab3Fasta
+COPY . BuildNiceEquCab3Fasta
 
 # Build the Container with:
-# $ docker build -t hga:latest .
+# $ docker build -t nicefasta:latest .
 
 # Run the Container passing through a port to the host
-# $ docker run -p 4000:4000 -it hga
+# $ docker run -p 4000:4000 -it nicefasta
 
 # Inside the container
 # $ cd BuildNiceEquCab3Fasta
